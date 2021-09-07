@@ -13,7 +13,7 @@ services:
         - NGINXGROUP=${NGINXGROUP:-www-data}
     container_name: nginx
     ports:
-      - 80:80
+      - 81:80
     volumes:
       - ./src:/var/www/html:delegated
     depends_on:
@@ -28,7 +28,7 @@ services:
     restart: unless-stopped
     tty: true
     ports:
-      - 3306:3306
+      - 33061:3306
     environment:
       MYSQL_DATABASE: homestead
       MYSQL_USER: homestead
