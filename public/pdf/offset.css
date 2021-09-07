@@ -1,0 +1,15 @@
+body, html {
+	font-size: 15px !important;
+	height: 842px !important;
+	width: 775px !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+.bordered {
+	border: solid black 1px;
+}
+
+.no-signature {
+    height: 50px !important;
+}

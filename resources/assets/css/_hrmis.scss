@@ -1,0 +1,329 @@
+html, body {
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+	background-color: #e9e9e9;
+    font-size: 15px !important;
+    height: 100% !important;
+}
+
+form {
+	font-size: 12px !important;
+}
+
+.custom-font {
+	font-size: 12px !important;
+}
+
+.form-control-xs {
+    height: calc(1em + .375rem + 5px) !important;
+    padding: .125rem .25rem !important;
+    font-size: .75rem !important;
+    line-height: 1.5 !important;
+}
+
+.card {
+	border-radius: 0px;
+}
+
+.card-header {
+	background-color: transparent;
+}
+
+.nav-item .nav-link {
+	border-radius: 0px;
+}
+
+.table {
+	font-size: 12px;
+}
+
+.nav-link {
+	font-size: 13px;
+}
+
+#hrmis-navbar .nav-link {
+    height: 40px;
+    padding-top: 11px;
+    min-height: 100%;
+}
+
+.dropdown-label {
+    font-size: 13px !important;
+}
+
+#hrmis-navbar .active {
+    background-color: #334d63 !important;
+}
+
+.button-link:hover {
+    background-color: rgba(0, 0, 0, 0.075) !important;
+}
+
+#hrmis-navbar .nav-link:hover {
+    background-color: #334d63 !important;
+}
+
+input {
+	border-radius: 0px !important;
+}
+
+select {
+	border-radius: 0px !important;
+}
+
+.custom-control-label {
+	line-height: 1.9;
+}
+
+.hrmis-label {
+	font-size: 14px;
+}
+
+.hrmis-title {
+	font-weight: 500;
+}
+
+.chosen-container-multi .chosen-choices {
+  	border: 1px solid #ced4da !important;
+  	background-image: none !important;
+  	background-image: none !important;
+}
+
+.comment-box {
+    height: 250px !important;
+    min-height: 100% !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+}
+
+.frame {
+    height: 100px; /* Can be anything */
+    width: 100px; /* Can be anything */
+    position: relative;
+    overflow: hidden;
+}
+
+.whereabouts-frame {
+    height: 75px; /* Can be anything */
+    width: 75px; /* Can be anything */
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.comment-image {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.chosen-disabled {
+  opacity: 0.8 !important;
+}
+
+.align-text {
+    line-height: 1.5;
+}
+
+.clickable-row:hover {
+    cursor: pointer;
+}
+
+.long-text {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 0;
+}
+
+.table tr td {
+    vertical-align: middle !important;
+}
+
+.dashboard-title {
+    color: #adadad;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.dashboard-value {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.more {
+    font-weight: 300;
+    font-size: 11px;
+    color: #555;
+    opacity: .7;
+}
+
+.bootstrap-toast {
+    position: fixed !important;
+    top: 35px !important;
+    right: 0px !important;
+    z-index: 1 !important;
+}
+
+.pds-toast {
+    position: fixed !important;
+    bottom: 35px !important;
+    left: 0px !important;
+    z-index: 1 !important;
+}
+
+.icon-wrapper {
+    position: relative;
+}
+
+.badge-notification {
+    font-size: 8px !important;
+    width: auto;
+    height: auto;
+    margin: 0;
+    position:absolute;
+    top:-5px;
+    right:-12px;
+}
+
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+.notification-item {
+    font-size: 12px;
+}
+
+.notification-item:hover {
+    color: #212529;
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
+.notification-footer:hover {
+    cursor: pointer;
+}
+
+.notif-header {
+    font-size: 13px !important;
+}
+
+.approval-badge {
+    border-radius: 5px;
+    padding: 1px 3px;
+    color: white;
+    font-size: 8px;
+    vertical-align: middle;
+}
+
+.custom-badge {
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
+    padding-left: 3px !important;
+    padding-right: 3px !important;
+}
+
+.hrmis-header {
+    background-color: #4d7496 !important;
+}
+
+.title {
+    color: #adadad;
+    font-size: 10.5px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.value {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+}
+
+.more {
+    font-weight: 300;
+    font-size: 11px;
+    color: #555;
+    opacity: .7;
+}
+
+.hrmis-date {
+    padding-top: 7px !important;
+    color: #334d63 !important;
+}
+
+.table-calendar tr td {
+    border-bottom: 1px solid #dee2e6;
+    border-left: 1px solid #dee2e6;
+    border-right: 1px solid #dee2e6;
+}
+
+.calendar-box {
+    min-height: 200px !important;
+}
+
+.calendar-container {
+    width: 200px !important;
+    min-width: 100% !important;
+    overflow: hidden !important;
+}
+
+.calendar-height {
+    min-height: 200px !important;
+}
+
+#card-login {
+    width: 350px !important;
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+}
+
+#date-close {
+    font-size: 12px !important;
+}
+
+.chart-height {
+    height: 400px;
+}
+
+.report-height {
+    height: 600px;
+}
+
+.pink {
+    color: $pink;
+}
+
+#floatingBtn {
+    position: fixed !important;
+    width: 60px !important;
+    height: 60px !important;
+    bottom: 40px !important;
+    right: 40px !important;
+    background-color: #0C9 !important;
+    color: #FFF !important;
+    border-radius: 50px !important;
+    text-align: center !important;
+    box-shadow: 2px 2px 3px #999 !important;
+    z-index: 999 !important;
+}
+
+.myfloat {
+    font-size: 18px !important;
+    margin-top: 22px !important;
+}
+
+.dost-image {
+    object-fit: cover !important;
+    border-radius: 50% !important;
+}
+
+.border-2 {
+    border-width: 2px !important;
+}

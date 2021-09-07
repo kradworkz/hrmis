@@ -1,0 +1,11 @@
+body, html {
+	font-size: 13px !important;
+	height: 842px !important;
+	width: 800px !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+.trip-ticket-border {
+	border: solid black 2.5px !important;
+}

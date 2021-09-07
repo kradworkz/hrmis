@@ -1,0 +1,30 @@
+body, html {
+	font-size: 10px;
+	font-family: "Times New Roman";
+	font-weight: bold;
+	height: 842px;
+	width: 842px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.leave-title {
+	font-size: 12px !important;
+}
+.border-bottom {
+	border-bottom: solid black 1px !important;
+}
+
+.border-top {
+	border-top: solid black 1px !important;
+}
+
+.leave_checkbox {
+	font-size: 30px !important;
+	width: 30px !important;
+	height: 30px !important;
+}
+
+.centered-width {
+	width: 35%;
+}

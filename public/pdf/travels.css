@@ -1,0 +1,35 @@
+body, html {
+	font-size: 13px;
+	height: 842px;
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.underline {
+	border-bottom: solid black 1px;
+}
+
+.display-cell {
+	display: table-cell;
+}
+
+.display-table {
+	display: table;
+	width: 90%;
+}
+
+.display-expense {
+	display: table;
+	width: 95%;
+}
+
+.img-height {
+	height: 50px;
+}
+
+.title-container {
+	display: inline-block;
+	vertical-align: middle;
+	padding-top: 5px;
+}

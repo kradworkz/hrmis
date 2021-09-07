@@ -1,0 +1,15 @@
+body, html {
+	font-size: 13px !important;
+	height: 842px !important;
+	width: 400px !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+.dtr-border-bottom {
+	border-bottom: solid black 1px !important;
+}
+
+#dtr-table tr td {
+	white-space: nowrap !important;
+}
