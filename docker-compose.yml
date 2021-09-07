@@ -1,24 +1,6 @@
-version: "3.8"
+version: "3"
 
 services:
-
-   app:
-    build:
-      context: .
-      dockerfile: ./dockerize/app/php.dockerfile
-    image: digitalocean.com/php
-    container_name: lcp-app
-    restart: unless-stopped
-    tty: true
-    environment:
-      SERVICE_NAME: app
-      SERVICE_TAGS: dev
-    working_dir: /var/www
-    volumes:
-       - ./:/var/www
-       - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
-    networks:
-      - laraveldockerize
 
   #Nginx Service
   webserver:
@@ -57,6 +39,21 @@ services:
     networks:
       - laraveldockerize
 
+
+  app:
+    build:
+      context: .
+      dockerfile: ./dockerize/app/php.dockerfile
+    container_name: lcp_app
+    volumes: 
+      - .:/var/www/html
+    restart: unless-stopped
+    tty: true
+    environment:
+      SERVICE_NAME: app
+      SERVICE_TAGS: dev
+    networks:
+      - laraveldockerize 
 
 
 #Docker Networks
