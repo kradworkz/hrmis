@@ -2,6 +2,24 @@ version: "3.8"
 
 services:
 
+   app:
+    build:
+      context: .
+      dockerfile: ./dockerize/app/php.dockerfile
+    image: digitalocean.com/php
+    container_name: app
+    restart: unless-stopped
+    tty: true
+    environment:
+      SERVICE_NAME: app
+      SERVICE_TAGS: dev
+    working_dir: /var/www
+    volumes:
+       - ./:/var/www
+       - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    networks:
+      - laraveldockerize
+
   #Nginx Service
   webserver:
     image: nginx:alpine
@@ -39,18 +57,7 @@ services:
     networks:
       - laraveldockerize
 
-  #PHP Service
-  php:
-    build:
-      context: .
-      dockerfile: ./dockerize/app/php.dockerfile
-    container_name: lcp_php
-    volumes: 
-      - .:/var/www/html
-    ports: 
-      - "9000:9000"
-    networks:
-      - laraveldockerize 
+
 
 #Docker Networks
 networks:
