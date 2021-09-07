@@ -11,7 +11,7 @@ services:
       args:
         - NGINXUSER=${NGINXUSER:-www-data}
         - NGINXGROUP=${NGINXGROUP:-www-data}
-    container_name: nginx
+    container_name: nginx-hrmis
     ports:
       - 81:80
     volumes:
@@ -35,7 +35,7 @@ services:
       MYSQL_PASSWORD: secret
       MYSQL_ROOT_PASSWORD: secret
       SERVICE_TAGS: dev
-      SERVICE_NAME: mysql
+      SERVICE_NAME: mysql-hrmis
     networks:
       - laravel
 
@@ -46,7 +46,7 @@ services:
       args:
         - PHPUSER=${PHPUSER:-www-data}
         - PHPGROUP=${PHPGROUP:-www-data}
-    container_name: php
+    container_name: php-hrmis
     volumes:
       - ./src:/var/www/html:delegated
     networks:
