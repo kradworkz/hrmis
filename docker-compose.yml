@@ -1,60 +1,53 @@
-version: "3"
+version: '3'
+
+networks:
+  laravel:
 
 services:
-
-  #Nginx Service
-  webserver:
-    image: nginx:alpine
-    container_name: lcp_nginx
-    restart: unless-stopped
-    ports:
-      - "8081:80"
-    volumes: 
-      - .:/var/www/html
-      - dockerize/nginx/default.conf:/etc/nginx/conf.d/default.conf
-    networks:
-      - laraveldockerize
-
-  #MySQL Service
-  mysql:
-    image: mysql:5.7.22
-    container_name: lcp_mysql
-    restart: unless-stopped
-    tty: true
-    ports:
-      - "33061:3306"
-    environment: 
-      MYSQL_DATABASE: ${DB_DATABASE}
-      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
-      MYSQL_PASSWORD: ${DB_PASSWORD}
-      MYSQL_USER: ${DB_USERNAME}
-      SERVICE_TAGS: dev
-      SERVICE_NAME: mysql
-    volumes: 
-      - dockerize/mysql/data:/var/lib/mysql
-      - dockerize/mysql/my.cnf:/etc/mysql/conf.d/mysql-custom.cnf
-    networks:
-      - laraveldockerize
-
-
-  app:
+  site:
     build:
       context: .
-      dockerfile: dockerize/app/php.dockerfile
-    image: digitalocean.com/php
-    container_name: lcp_app
-    volumes: 
-      - .:/var/www
+      dockerfile: nginx.dockerfile
+      args:
+        - NGINXUSER=${NGINXUSER:-www-data}
+        - NGINXGROUP=${NGINXGROUP:-www-data}
+    container_name: nginx
+    ports:
+      - 80:80
+    volumes:
+      - ./src:/var/www/html:delegated
+    depends_on:
+      - php
+      - mysql
+    networks:
+      - laravel
+
+  mysql:
+    image: mysql:5.7.29
+    container_name: mysql
     restart: unless-stopped
     tty: true
+    ports:
+      - 3306:3306
     environment:
-      SERVICE_NAME: app
+      MYSQL_DATABASE: homestead
+      MYSQL_USER: homestead
+      MYSQL_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD: secret
       SERVICE_TAGS: dev
-    working_dir: /var/www
+      SERVICE_NAME: mysql
     networks:
-      - laraveldockerize 
+      - laravel
 
-
-#Docker Networks
-networks:
-  laraveldockerize:
+  php:
+    build:
+      context: .
+      dockerfile: php.dockerfile
+      args:
+        - PHPUSER=${PHPUSER:-www-data}
+        - PHPGROUP=${PHPGROUP:-www-data}
+    container_name: php
+    volumes:
+      - ./src:/var/www/html:delegated
+    networks:
+      - laravel
