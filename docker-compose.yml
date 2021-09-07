@@ -7,7 +7,7 @@ services:
       context: .
       dockerfile: ./dockerize/app/php.dockerfile
     image: digitalocean.com/php
-    container_name: app
+    container_name: lcp-app
     restart: unless-stopped
     tty: true
     environment:
