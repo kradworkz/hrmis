@@ -41,14 +41,16 @@ services:
     build:
       context: .
       dockerfile: ./dockerize/app/php.dockerfile
+    image: digitalocean.com/php
     container_name: lcp_app
     volumes: 
-      - .:/var/www/html
+      - .:/var/www
     restart: unless-stopped
     tty: true
     environment:
       SERVICE_NAME: app
       SERVICE_TAGS: dev
+    working_dir: /var/www
     networks:
       - laraveldockerize 
 
